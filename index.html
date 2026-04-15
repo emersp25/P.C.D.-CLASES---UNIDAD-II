@@ -54,7 +54,7 @@
           </div>
           <h3>${c.tema}</h3>
           <ul class="card-subtemas">${d.subtemas.map(s => `<li>${s}</li>`).join('')}</ul>
-          <a href="${c.href}" class="card-btn">Ver Clase →</a>
+          <a href="${c.folder}/${c.file}" class="card-btn">Ver Clase →</a>
         `;
         grid.appendChild(card);
       });
