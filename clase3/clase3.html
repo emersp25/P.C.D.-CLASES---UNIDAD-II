@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unidad II – El Motor del Blog: CMS | Producción de Contenidos Digitales</title>
+  <link rel="stylesheet" href="../nav.css" />
+  <link rel="stylesheet" href="clase3.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="topnav" data-active="clase3" data-base="../"></nav>
+
+
+  <!-- ENCABEZADO -->
+  <header class="hero">
+    <div class="hero-badge">Clase 3 · Unidad II</div>
+    <h1 class="hero-title">El Motor<br><span class="accent">del Blog</span></h1>
+    <p class="hero-sub">Producción de Contenidos Digitales &nbsp;·&nbsp; Prof. Emerson Sec</p>
+    <div class="hero-chips">
+      <span>⚙️ ¿Qué es un CMS?</span>
+      <span>🍳 Backend vs Frontend</span>
+      <span>📄 Entradas vs Páginas</span>
+      <span>🧩 Temas y Plugins</span>
+    </div>
+    <div class="scroll-hint">↓ Desplázate para explorar</div>
+  </header>
+
+  <main>
+
+    <!-- SECCIÓN 1: QUÉ ES UN CMS -->
+    <section class="slide">
+      <div class="slide-number">01</div>
+      <div class="content-wrap">
+        <div class="tag">Concepto clave</div>
+        <h2>¿Qué es un CMS?</h2>
+        <p>WordPress no es solo un "creador de páginas". Técnicamente es un <strong>CMS</strong> — <em>Content Management System</em> o <strong>Sistema de Gestión de Contenidos</strong>.</p>
+
+        <div class="acronym-box">
+          <div class="letter-card"><span class="letter">C</span><span class="meaning">Content</span></div>
+          <div class="letter-card"><span class="letter">M</span><span class="meaning">Management</span></div>
+          <div class="letter-card"><span class="letter">S</span><span class="meaning">System</span></div>
+        </div>
+
+        <div class="metaphor-card">
+          <div class="metaphor-icon">📰</div>
+          <div class="metaphor-body">
+            <div class="metaphor-label">La Metáfora de la Revista</div>
+            <p>Imaginemos que una página web es una <strong>revista física</strong>. En el pasado, con HTML puro, si se quería cambiar una palabra había que reimprimir toda la revista.</p>
+            <p>Con un CMS, el <strong>diseño</strong> (la plantilla) y el <strong>contenido</strong> (el texto) están <em>separados</em>. El texto puede cambiar todos los días y el diseño se mantiene intacto automáticamente.</p>
+          </div>
+        </div>
+
+        <div class="cms-examples">
+          <div class="cms-chip active">🏆 WordPress <span>43% de la web</span></div>
+          <div class="cms-chip">Joomla</div>
+          <div class="cms-chip">Drupal</div>
+          <div class="cms-chip">Wix</div>
+          <div class="cms-chip">Shopify</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: BACKEND VS FRONTEND -->
+    <section class="slide slide-alt">
+      <div class="slide-number">02</div>
+      <div class="content-wrap">
+        <div class="tag">Repaso Unidad I</div>
+        <h2>Backend vs. Frontend</h2>
+        <p>Dos mundos que trabajan juntos. El estudiante ya los conoce de la Unidad I, ahora se ven en acción dentro de WordPress.</p>
+
+        <div class="dual-layout">
+          <div class="dual-card backend">
+            <div class="dual-icon">🍳</div>
+            <h3>Backend — La Cocina</h3>
+            <div class="dual-badge">Dashboard / Escritorio</div>
+            <ul>
+              <li>Solo el autor o administrador puede entrar.</li>
+              <li>Se accede con usuario y contraseña.</li>
+              <li>Aquí se escriben textos, se suben fotos y se instalan plugins.</li>
+              <li>El usuario de internet <strong>nunca lo ve</strong>.</li>
+            </ul>
+          </div>
+          <div class="dual-card frontend">
+            <div class="dual-icon">🍽️</div>
+            <h3>Frontend — El Restaurante</h3>
+            <div class="dual-badge">Sitio Público</div>
+            <ul>
+              <li>Es lo que cualquier usuario ve en internet.</li>
+              <li>No requiere usuario ni contraseña.</li>
+              <li>Todo lo guardado en la cocina se muestra aquí automáticamente.</li>
+              <li>Es el resultado <strong>visible</strong> del trabajo en el backend.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flow-visual">
+          <div class="flow-step">✍️ Escritor escribe en el Dashboard</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">🗄️ Se guarda en la Base de Datos</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">🌐 Aparece en el sitio público</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: ENTRADAS VS PÁGINAS -->
+    <section class="slide">
+      <div class="slide-number">03</div>
+      <div class="content-wrap">
+        <div class="tag">Error #1 de los principiantes</div>
+        <h2>Entradas vs. Páginas</h2>
+        <p>Este es el concepto que más confunde a los nuevos usuarios de WordPress. La diferencia es fundamental y hay que tenerla clara antes de publicar.</p>
+
+        <div class="compare-table">
+          <div class="ct-header">
+            <div class="ct-col-label"></div>
+            <div class="ct-col posts">📝 Entradas <em>(Posts)</em></div>
+            <div class="ct-col pages">📄 Páginas <em>(Pages)</em></div>
+          </div>
+          <div class="ct-row">
+            <div class="ct-label">Naturaleza</div>
+            <div class="ct-col posts">Dinámicas y cronológicas</div>
+            <div class="ct-col pages">Estáticas y atemporales</div>
+          </div>
+          <div class="ct-row">
+            <div class="ct-label">Uso principal</div>
+            <div class="ct-col posts">Noticias, artículos, crónicas del blog</div>
+            <div class="ct-col pages">"Acerca de", "Contacto", "Políticas"</div>
+          </div>
+          <div class="ct-row">
+            <div class="ct-label">Organización</div>
+            <div class="ct-col posts">Usan <strong>Categorías</strong> y <strong>Etiquetas</strong></div>
+            <div class="ct-col pages">Tienen jerarquía (páginas madre e hijas)</div>
+          </div>
+          <div class="ct-row">
+            <div class="ct-label">Comentarios</div>
+            <div class="ct-col posts">✅ Permiten comentarios del público</div>
+            <div class="ct-col pages">🚫 Normalmente no tienen comentarios</div>
+          </div>
+        </div>
+
+        <div class="alert-box">
+          💡 <strong>Regla práctica:</strong> Si el contenido tiene fecha y caduca con el tiempo → <strong>Entrada</strong>. Si el contenido siempre es relevante → <strong>Página</strong>.
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: TEMAS Y PLUGINS -->
+    <section class="slide slide-alt">
+      <div class="slide-number">04</div>
+      <div class="content-wrap">
+        <div class="tag">El ecosistema WordPress</div>
+        <h2>Temas y Plugins</h2>
+        <p>Dos pilares que hacen de WordPress la herramienta más poderosa y flexible del mercado.</p>
+
+        <div class="ecosystem-grid">
+          <div class="eco-card theme-card">
+            <div class="eco-header">
+              <span class="eco-icon">👗</span>
+              <h3>El Tema <em>(Theme)</em></h3>
+            </div>
+            <p>Es la <strong>"ropa"</strong> del sitio. Controla el aspecto visual: colores, tipografías y disposición de los elementos.</p>
+            <div class="eco-key">
+              <span>🔁 Cambiar el tema cambia cómo se ve el sitio, pero <strong>nunca borra los textos</strong>.</span>
+            </div>
+          </div>
+
+          <div class="eco-card plugin-card">
+            <div class="eco-header">
+              <span class="eco-icon">🧩</span>
+              <h3>El Plugin</h3>
+            </div>
+            <p>Son <strong>"aplicaciones"</strong> que se instalan en el sitio para darle superpoderes sin escribir código.</p>
+            <div class="eco-key">
+              <span>⚡ Cada plugin agrega una función nueva al sitio.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="plugin-examples">
+          <div class="plugin-ex-label">Ejemplos de plugins populares:</div>
+          <div class="plugin-chips">
+            <div class="plugin-chip">📱 Botón de WhatsApp</div>
+            <div class="plugin-chip">🛡️ Anti-Spam en comentarios</div>
+            <div class="plugin-chip">🔍 Mejora de SEO en Google</div>
+            <div class="plugin-chip">📊 Estadísticas de visitas</div>
+            <div class="plugin-chip">🖼️ Galería de imágenes</div>
+            <div class="plugin-chip">📩 Formulario de contacto</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5: HOJA DE TRABAJO -->
+    <section class="slide slide-hw">
+      <div class="slide-number">📝</div>
+      <div class="content-wrap">
+        <div class="tag">Hoja de Trabajo</div>
+        <h2>Tarea Teórica: Fundamentos de CMS</h2>
+
+        <div class="hw-header">
+          <div class="hw-info-grid">
+            <div><span class="hw-label">Institución</span> Liceo Cristiano de Estudios Avanzados Elim San Lucas</div>
+            <div><span class="hw-label">Curso</span> Producción de Contenidos Digitales</div>
+            <div><span class="hw-label">Grado</span> Quinto Bachillerato</div>
+            <div><span class="hw-label">Docente</span> Prof. Emerson Sec</div>
+            <div><span class="hw-label">Unidad</span> II — Creación de Blogs y Redacción Web</div>
+            <div><span class="hw-label">Punteo</span> _____/10 pts.</div>
+          </div>
+          <div class="hw-student-line">
+            <div class="hw-field">Nombre: <span class="field-line"></span></div>
+            <div class="hw-field">Fecha: <span class="field-line short"></span></div>
+            <div class="hw-field">Clave: <span class="field-line short"></span></div>
+          </div>
+          <p class="hw-instructions">Responda las siguientes interrogantes basándose en la clase teórica sobre Sistemas de Gestión de Contenidos. Utilice lapicero de tinta negra o azul.</p>
+        </div>
+
+        <!-- SERIE I -->
+        <div class="serie">
+          <div class="serie-header">Serie I: Conceptos Fundamentales <span class="pts">(4 pts)</span></div>
+
+          <div class="question">
+            <div class="q-num">1</div>
+            <div class="q-body">
+              <p>Defina qué significan las siglas <strong>CMS</strong> y explique con sus propias palabras su función principal en la web actual.</p>
+              <div class="answer-lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="q-num">2</div>
+            <div class="q-body">
+              <p>Al entrar con usuario y contraseña para escribir un nuevo texto en su blog, ¿en qué parte de la arquitectura del software se encuentra trabajando: <strong>Frontend</strong> o <strong>Backend</strong>? Justifique su respuesta.</p>
+              <div class="answer-lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERIE II -->
+        <div class="serie">
+          <div class="serie-header">Serie II: Entradas vs. Páginas <span class="pts">(3 pts)</span></div>
+          <p class="serie-intro">El estudiante es administrador web del Liceo Elim. Debe decidir qué formato usar para cada publicación. Escribe "Entrada" o "Página" y justifica técnicamente.</p>
+
+          <div class="question">
+            <div class="q-num">1</div>
+            <div class="q-body">
+              <p>El <strong>formulario de inscripción</strong> y la <strong>ubicación física (mapa)</strong> del colegio.</p>
+              <div class="format-field"><span>Formato:</span><div class="field-line medium"></div></div>
+              <div class="format-field"><span>Justificación:</span><div class="field-line long"></div></div>
+              <div class="line"></div>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="q-num">2</div>
+            <div class="q-body">
+              <p>La <strong>crónica deportiva</strong> sobre el torneo intramuros que se jugó el viernes pasado.</p>
+              <div class="format-field"><span>Formato:</span><div class="field-line medium"></div></div>
+              <div class="format-field"><span>Justificación:</span><div class="field-line long"></div></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERIE III -->
+        <div class="serie">
+          <div class="serie-header">Serie III: Resolución de Casos <span class="pts">(3 pts)</span></div>
+          <div class="case-box">
+            <div class="case-label">📋 Caso</div>
+            <p>El estudiante acaba de publicar una entrada muy personal e inspiradora en su blog. Al día siguiente revisa los comentarios y nota que un usuario anónimo ha dejado enlaces a páginas de virus y comentarios ofensivos.</p>
+          </div>
+
+          <div class="question">
+            <div class="q-num">1</div>
+            <div class="q-body">
+              <p>Considerando que WordPress permite instalar complementos, ¿qué tipo de herramienta instalería para detener automáticamente este problema: <strong>¿Tema o Plugin?</strong></p>
+              <div class="answer-lines">
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="q-num">2</div>
+            <div class="q-body">
+              <p>Mencione una regla de <strong>Netiquette</strong> que ese usuario anónimo acaba de violar en el blog.</p>
+              <div class="answer-lines">
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SOLUCIONARIO -->
+        <div class="answer-section">
+          <button class="btn-reveal" id="btnReveal" onclick="toggleAnswer()">
+            🔑 Solucionario
+          </button>
+          <div class="answer-box" id="answerBox">
+            <div class="answer-label">✅ ESTE ES UN EJEMPLO DE SOLUCIONARIO | ES LA RESPUESTA ESPERADA, NO COPIARLA DIRECTAMENTE, COMO ESTUDIANTE DEBE DE DAR UNA PROPIA RESPUESTA</div>
+            <div class="answer-content">
+
+              <div class="sol-serie">
+                <div class="sol-serie-title">Serie I — Conceptos Fundamentales</div>
+                <p><strong>1.</strong> <em>Content Management System</em>. Permite gestionar textos e imágenes sin tocar código de programación, separando el diseño del contenido. El administrador puede actualizar el sitio desde una interfaz visual sencilla.</p>
+                <p><strong>2.</strong> <strong>Backend</strong> (Escritorio / Dashboard), porque el estudiante está gestionando datos internos del sistema antes de publicarlos. El acceso con usuario y contraseña es la característica definitoria del backend.</p>
+              </div>
+
+              <div class="sol-serie">
+                <div class="sol-serie-title">Serie II — Entradas vs. Páginas</div>
+                <p><strong>1. Página</strong> — porque es información estática, atemporal y permanente. El formulario de inscripción y el mapa siempre son relevantes, no tienen fecha y no requieren comentarios del público.</p>
+                <p><strong>2. Entrada</strong> — porque es una noticia cronológica y reciente. Tiene una fecha concreta (el viernes pasado), puede quedar archivada y puede recibir comentarios del público interesado.</p>
+              </div>
+
+              <div class="sol-serie">
+                <div class="sol-serie-title">Serie III — Resolución de Casos</div>
+                <p><strong>1. Plugin</strong> — específicamente uno de Anti-Spam o moderación de comentarios (ejemplo: Akismet). Un Tema solo cambiaría el aspecto visual del sitio, no filtraría contenido malicioso.</p>
+                <p><strong>2.</strong> Violación al <strong>respeto y cortesía digital</strong> — también se acepta: envío de contenido basura (Spam) o uso irresponsable del anonimato en línea.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>Producción de Contenidos Digitales &nbsp;·&nbsp; Unidad II &nbsp;·&nbsp; Prof. Emerson Sec</p>
+    <p class="footer-sub">Liceo Cristiano Elim — Quinto Bachillerato</p>
+  </footer>
+
+  <script src="../nav.js"></script>
+  <script src="clase3.js"></script>
+
+  <script>
+    function toggleAnswer() {
+      toggleReveal('btnReveal', 'answerBox', '🔑 Solucionario', '🙈 Ocultar Solucionario');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* ================================================
+   BARRA DE NAVEGACIÓN COMPARTIDA
+   ================================================ */
+.topnav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 20, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  gap: 1rem;
+}
+
+/* Marca / nombre del curso */
+.topnav-brand a {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.15rem;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+.topnav-brand a:hover { opacity: 1; }
+
+/* Contenedor de links */
+.topnav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.topnav-links a {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.topnav-links a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.10);
+}
+
+.topnav-links a.nav-active {
+  color: #fff;
+  border-color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.12);
+}
+
+/* Link al índice */
+.topnav-links a.nav-home {
+  color: rgba(255,255,255,0.5);
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+}
+
+/* Compensar el nav fijo en el hero */
+body { padding-top: 60px; }
+
+/* Hamburger — mobile */
+.topnav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
+.topnav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+/* ================================================
+   RESPONSIVO
+   ================================================ */
+@media (max-width: 640px) {
+  .topnav-toggle { display: flex; }
+
+  .topnav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 60px; left: 0; right: 0;
+    background: rgba(10,10,20,0.97);
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    gap: 0.3rem;
+  }
+
+  .topnav-links.open { display: flex; }
+
+  .topnav-links a { font-size: 1rem; padding: 0.5rem 0.8rem; width: 100%; }
+}

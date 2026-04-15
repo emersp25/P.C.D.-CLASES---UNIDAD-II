@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Producción de Contenidos Digitales | Prof. Emerson Sec</title>
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="topnav" data-active="" data-base="./"></nav>
+
+  <header class="hub-hero">
+    <div class="hub-hero-inner">
+      <div class="hub-badge">Unidad II · Quinto Bachillerato</div>
+      <h1>Producción de<br><span>Contenidos Digitales</span></h1>
+      <p>Liceo Cristiano de Estudios Avanzados Elim &nbsp;·&nbsp; Prof. Emerson Sec</p>
+    </div>
+  </header>
+
+  <main class="hub-main">
+    <div class="hub-section-title">
+      <h2>Clases disponibles</h2>
+      <p>Selecciona una clase para explorar su contenido.</p>
+    </div>
+    <div class="cards-grid" id="cardsGrid"></div>
+  </main>
+
+  <footer class="hub-footer">
+    <p>Producción de Contenidos Digitales &nbsp;·&nbsp; Unidad II &nbsp;·&nbsp; Prof. Emerson Sec</p>
+    <p>Liceo Cristiano Elim — Quinto Bachillerato</p>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    const HUB_DATA = {
+      clase1: { color: '#e85d26', emoji: '✍️', subtemas: ['El Mito de la Lectura', 'Patrón en F', 'Pirámide Invertida', 'Reglas de Oro', 'Actividad: La Traducción Digital'] },
+      clase2: { color: '#2563eb', emoji: '📝', subtemas: ['¿Qué es un Blog?', 'Anatomía de una Entrada', 'Escritura Web aplicada', 'WordPress', 'Tarea: Blog de Graduando'] },
+      clase3: { color: '#059669', emoji: '⚙️', subtemas: ['¿Qué es un CMS?', 'Backend vs Frontend', 'Entradas vs Páginas', 'Temas y Plugins', 'Hoja de Trabajo'] },
+    };
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('cardsGrid');
+      CLASES.forEach((c, i) => {
+        const d = HUB_DATA[c.key] || { color: '#6b7280', emoji: '📖', subtemas: [] };
+        const card = document.createElement('div');
+        card.className = 'clase-card';
+        card.style.setProperty('--card-color', d.color);
+        card.innerHTML = `
+          <div class="card-top">
+            <span class="card-num">Clase ${i + 1}</span>
+            <span class="card-emoji">${d.emoji}</span>
+          </div>
+          <h3>${c.tema}</h3>
+          <ul class="card-subtemas">${d.subtemas.map(s => `<li>${s}</li>`).join('')}</ul>
+          <a href="${c.href}" class="card-btn">Ver Clase →</a>
+        `;
+        grid.appendChild(card);
+      });
+    });
+  </script>
+</body>
+</html>
