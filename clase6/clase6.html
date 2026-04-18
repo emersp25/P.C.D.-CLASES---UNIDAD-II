@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unidad II – Dominios de Internet | Producción de Contenidos Digitales</title>
+  <link rel="stylesheet" href="../nav.css" />
+  <link rel="stylesheet" href="clase6.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="topnav" data-active="clase6" data-base="../"></nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-badge">Clase 6 · Unidad II</div>
+    <h1 class="hero-title">Dominios<br><span class="accent">de Internet</span></h1>
+    <p class="hero-sub">Producción de Contenidos Digitales &nbsp;·&nbsp; Prof. Emerson Sec</p>
+    <div class="hero-chips">
+      <span>🌐 ¿Qué es un dominio?</span>
+      <span>🔬 Anatomía de una URL</span>
+      <span>🗺️ Extensiones geográficas</span>
+      <span>🕵️ Detective de Fraudes</span>
+    </div>
+    <div class="scroll-hint">↓ Desplázate para explorar</div>
+  </header>
+
+  <main>
+
+    <!-- SECCIÓN 1: QUÉ ES UN DOMINIO -->
+    <section class="slide">
+      <div class="slide-number">01</div>
+      <div class="content-wrap">
+        <div class="tag">El problema de la memoria</div>
+        <h2>¿Qué es un Dominio?</h2>
+        <p>Las computadoras en internet se identifican entre sí usando números llamados <strong>Direcciones IP</strong>. Cada servidor, cada página web, tiene una dirección numérica única asignada.</p>
+
+        <div class="ip-box">
+          <div class="ip-side">
+            <div class="ip-icon">🖥️</div>
+            <div class="ip-label">Lo que entiende la máquina</div>
+            <div class="ip-address">142.250.190.46</div>
+            <div class="ip-sub">Dirección IP de Google</div>
+          </div>
+          <div class="ip-transform">
+            <div class="ip-tr-icon">↔️</div>
+            <div class="ip-tr-label">DNS traduce</div>
+          </div>
+          <div class="ip-side domain-side">
+            <div class="ip-icon">👤</div>
+            <div class="ip-label">Lo que recuerda el humano</div>
+            <div class="ip-address domain-addr">google.com</div>
+            <div class="ip-sub">Dominio registrado</div>
+          </div>
+        </div>
+
+        <div class="metaphor-card">
+          <div class="metaphor-icon">🗺️</div>
+          <div class="metaphor-body">
+            <div class="metaphor-label">La metáfora de las coordenadas</div>
+            <p>Imaginar tener que memorizar las coordenadas GPS exactas de la casa de cada amigo para poder visitarlo. Sería imposible. Por eso usamos direcciones como "Avenida 1, Calle 2, San Lucas".</p>
+            <p>Un <strong>Dominio de Internet</strong> cumple la misma función: es una traducción legible por humanos de una dirección IP numérica. El sistema que realiza esa traducción se llama <strong>DNS</strong> (Domain Name System).</p>
+          </div>
+        </div>
+
+        <div class="dns-fact">
+          <span class="dns-fact-icon">⚡</span>
+          <div>Cada vez que se escribe una dirección web en el navegador, el DNS consulta su base de datos en milisegundos y traduce el nombre al número IP correspondiente — todo antes de que la página empiece a cargar.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: ANATOMÍA -->
+    <section class="slide slide-alt">
+      <div class="slide-number">02</div>
+      <div class="content-wrap">
+        <div class="tag">Estructura técnica</div>
+        <h2>Anatomía de un Dominio Web</h2>
+        <p>Una dirección web no es un bloque de texto — tiene partes bien definidas, cada una con una función específica. Se analiza el siguiente ejemplo real:</p>
+
+        <div class="url-anatomy">
+          <div class="url-display">
+            <span class="url-part sub">www</span><span class="url-dot">.</span><span class="url-part second">mineduc</span><span class="url-dot">.</span><span class="url-part tld1">gob</span><span class="url-dot">.</span><span class="url-part tld2">gt</span>
+          </div>
+          <div class="url-labels">
+            <div class="url-label-item sub-label">
+              <div class="url-label-line"></div>
+              <strong>Subdominio</strong>
+              <span>División dentro del dominio. Hoy casi no es obligatorio escribirlo.</span>
+            </div>
+            <div class="url-label-item second-label">
+              <div class="url-label-line"></div>
+              <strong>Dominio de 2º nivel</strong>
+              <span>El nombre elegido por la organización. Es lo que se registra.</span>
+            </div>
+            <div class="url-label-item tld-label">
+              <div class="url-label-line"></div>
+              <strong>Extensiones (.gob.gt)</strong>
+              <span>Indican la naturaleza del sitio y su ubicación geográfica.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="anatomy-cards">
+          <div class="anat-card">
+            <div class="anat-icon">🏷️</div>
+            <h3>Subdominio</h3>
+            <p>Permite crear secciones dentro del mismo sitio. Ejemplo: <code>blog.empresa.com</code> o <code>tienda.empresa.com</code>.</p>
+          </div>
+          <div class="anat-card">
+            <div class="anat-icon">✏️</div>
+            <h3>Segundo Nivel</h3>
+            <p>El nombre de la marca. Es único en el mundo para su extensión — si alguien ya lo registró, no se puede usar.</p>
+          </div>
+          <div class="anat-card">
+            <div class="anat-icon">🔖</div>
+            <h3>Extensión (TLD)</h3>
+            <p>Top-Level Domain. Clasifica el sitio por naturaleza (<code>.com</code>, <code>.org</code>) o por país (<code>.gt</code>, <code>.mx</code>).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: EXTENSIONES GENÉRICAS -->
+    <section class="slide">
+      <div class="slide-number">03</div>
+      <div class="content-wrap">
+        <div class="tag">gTLD — Genéricos</div>
+        <h2>Extensiones por Naturaleza</h2>
+        <p>Las extensiones genéricas indican a qué se dedica o a quién pertenece un sitio. Algunas son libres; otras están estrictamente restringidas.</p>
+
+        <div class="ext-grid">
+          <div class="ext-card king">
+            <div class="ext-badge">.com</div>
+            <h3>Comercial</h3>
+            <p>El rey indiscutible de internet. Cualquier empresa o persona puede registrarlo. Es el primero que el usuario busca.</p>
+            <div class="ext-access free">🟢 Libre — cualquiera puede registrarlo</div>
+          </div>
+          <div class="ext-card">
+            <div class="ext-badge org">.org</div>
+            <h3>Organización</h3>
+            <p>Creado para entidades sin fines de lucro: ONGs, iglesias, fundaciones y asociaciones comunitarias.</p>
+            <div class="ext-access free">🟢 Libre — pero asociado a causas sociales</div>
+          </div>
+          <div class="ext-card">
+            <div class="ext-badge edu">.edu</div>
+            <h3>Educación</h3>
+            <p>Reservado estrictamente para escuelas y universidades avaladas por las autoridades de educación.</p>
+            <div class="ext-access restricted">🔴 Restringido — no se puede comprar libremente</div>
+          </div>
+          <div class="ext-card">
+            <div class="ext-badge gob">.gob / .gov</div>
+            <h3>Gobierno</h3>
+            <p>Uso exclusivo para instituciones del Estado. Solo una entidad gubernamental puede registrarlo.</p>
+            <div class="ext-access restricted">🔴 Restringido — solo para el Estado</div>
+          </div>
+          <div class="ext-card">
+            <div class="ext-badge net">.net</div>
+            <h3>Network</h3>
+            <p>Creado para empresas de telecomunicaciones. Hoy se usa como alternativa cuando el <code>.com</code> ya está ocupado.</p>
+            <div class="ext-access free">🟢 Libre — alternativa al .com</div>
+          </div>
+        </div>
+
+        <div class="alert-box">
+          💡 <strong>Regla de seguridad:</strong> Una página de gobierno que termine en <code>.com</code> o <code>.org</code> es una señal de alerta inmediata. Los trámites oficiales siempre usan extensiones restringidas.
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: EXTENSIONES GEOGRÁFICAS -->
+    <section class="slide slide-alt">
+      <div class="slide-number">04</div>
+      <div class="content-wrap">
+        <div class="tag">ccTLD — Geográficos</div>
+        <h2>Extensiones de País</h2>
+        <p>Cada país del mundo tiene asignada su propia extensión de dominio. Usarla le indica a Google y a los usuarios exactamente <strong>dónde opera</strong> el sitio.</p>
+
+        <div class="country-grid">
+          <div class="country-card gt">
+            <div class="country-flag">🇬🇹</div>
+            <div class="country-ext">.gt</div>
+            <div class="country-name">Guatemala</div>
+          </div>
+          <div class="country-card mx">
+            <div class="country-flag">🇲🇽</div>
+            <div class="country-ext">.mx</div>
+            <div class="country-name">México</div>
+          </div>
+          <div class="country-card es">
+            <div class="country-flag">🇪🇸</div>
+            <div class="country-ext">.es</div>
+            <div class="country-name">España</div>
+          </div>
+          <div class="country-card us">
+            <div class="country-flag">🇺🇸</div>
+            <div class="country-ext">.us</div>
+            <div class="country-name">Estados Unidos</div>
+          </div>
+          <div class="country-card br">
+            <div class="country-flag">🇧🇷</div>
+            <div class="country-ext">.br</div>
+            <div class="country-name">Brasil</div>
+          </div>
+          <div class="country-card co">
+            <div class="country-flag">🇨🇴</div>
+            <div class="country-ext">.co</div>
+            <div class="country-name">Colombia</div>
+          </div>
+        </div>
+
+        <div class="seo-local-box">
+          <div class="seo-local-header">
+            <span>📍</span>
+            <h3>El impacto local en el SEO</h3>
+          </div>
+          <p>Al usar un dominio <code>.gt</code> o <code>.com.gt</code>, se le indica a Google: <em>"Este negocio opera en Guatemala"</em>. Esto hace que el sitio aparezca primero cuando alguien en el país busca el servicio, en lugar de competir con negocios de España o México que usan el mismo idioma.</p>
+          <div class="seo-compare">
+            <div class="seo-col">
+              <div class="seo-col-label">Con .com.gt</div>
+              <div class="seo-col-result good-result">Aparece en búsquedas locales de Guatemala 🇬🇹</div>
+            </div>
+            <div class="seo-col">
+              <div class="seo-col-label">Solo con .com</div>
+              <div class="seo-col-result neutral-result">Compite con todos los países de habla hispana 🌍</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="registrar-box">
+          <div class="reg-header">
+            <span class="reg-icon">🏢</span>
+            <div>
+              <h3>El Negocio de los Registradores</h3>
+              <div class="reg-myth">⚠️ El mito: "Voy a comprar un dominio para siempre"</div>
+            </div>
+          </div>
+          <p>La realidad es que los dominios se <strong>alquilan</strong>, normalmente por año. Empresas como <strong>GoDaddy</strong>, <strong>Namecheap</strong> y <strong>Hostinger</strong> funcionan como bienes raíces digitales: cobran una tarifa anual para mantener el nombre reservado a nivel mundial.</p>
+          <div class="reg-chips">
+            <span class="reg-chip">GoDaddy</span>
+            <span class="reg-chip">Namecheap</span>
+            <span class="reg-chip">Hostinger</span>
+            <span class="reg-chip">Google Domains</span>
+          </div>
+          <div class="reg-warning">
+            ⚠️ Si no se renueva el dominio antes de que venza, cualquier otra persona puede comprarlo y el sitio queda sin dirección.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5: DETECTIVE DE FRAUDES -->
+    <section class="slide slide-detective">
+      <div class="slide-number">🕵️</div>
+      <div class="content-wrap">
+        <div class="tag">Actividad en clase</div>
+        <h2>El Detective de Fraudes</h2>
+        <p>El phishing es una técnica de estafa que usa dominios falsos diseñados para parecerse a sitios reales. Conocer la anatomía de un dominio es la primera línea de defensa.</p>
+        <p>Para cada par de enlaces, el estudiante identifica cuál es <strong>real</strong> y cuál es una <strong>estafa</strong>, basándose únicamente en la lógica del dominio y su extensión.</p>
+
+        <div class="cases-list">
+
+          <!-- CASO 1 -->
+          <div class="case-card">
+            <div class="case-header">
+              <span class="case-num">Caso 1</span>
+              <span class="case-label">🏦 El Banco</span>
+            </div>
+            <div class="case-options">
+              <div class="case-option opt-a">
+                <span class="opt-letter">A</span>
+                <code>www.banco-industrial-seguro.com</code>
+              </div>
+              <div class="case-option opt-b">
+                <span class="opt-letter">B</span>
+                <code>www.bi.com.gt</code>
+              </div>
+            </div>
+            <button id="btn1" class="btn-case" onclick="toggleReveal('btn1','ans1','⚖️ Ver veredicto','🙈 Ocultar veredicto')">
+              ⚖️ Ver veredicto
+            </button>
+            <div class="case-answer" id="ans1">
+              <div class="verdict-label">📋 Veredicto — <span class="real-tag">B es el sitio real</span></div>
+              <p>Las instituciones financieras locales serias usan la extensión del país (<code>.com.gt</code>) para validar su operación en Guatemala. El dominio A (<code>.com</code> genérico) puede ser registrado por cualquier persona en el mundo en minutos por pocos dólares — es la herramienta favorita de los estafadores.</p>
+            </div>
+          </div>
+
+          <!-- CASO 2 -->
+          <div class="case-card">
+            <div class="case-header">
+              <span class="case-num">Caso 2</span>
+              <span class="case-label">🏛️ El Gobierno</span>
+            </div>
+            <div class="case-options">
+              <div class="case-option opt-a">
+                <span class="opt-letter">A</span>
+                <code>www.sat.gob.gt</code>
+              </div>
+              <div class="case-option opt-b">
+                <span class="opt-letter">B</span>
+                <code>www.tramites-sat-guatemala.org</code>
+              </div>
+            </div>
+            <button id="btn2" class="btn-case" onclick="toggleReveal('btn2','ans2','⚖️ Ver veredicto','🙈 Ocultar veredicto')">
+              ⚖️ Ver veredicto
+            </button>
+            <div class="case-answer" id="ans2">
+              <div class="verdict-label">📋 Veredicto — <span class="real-tag">A es el sitio real</span></div>
+              <p>Solo el Estado puede usar la extensión <code>.gob</code>. Ningún trámite oficial del gobierno guatemalteco estará alojado en un <code>.org</code>. El dominio B combina palabras que suenan oficiales ("trámites", "SAT", "Guatemala") para engañar visualmente, pero la extensión delata que no es gubernamental.</p>
+            </div>
+          </div>
+
+          <!-- CASO 3 -->
+          <div class="case-card">
+            <div class="case-header">
+              <span class="case-num">Caso 3</span>
+              <span class="case-label">🎓 La Universidad</span>
+            </div>
+            <div class="case-options">
+              <div class="case-option opt-a">
+                <span class="opt-letter">A</span>
+                <code>www.usac.edu.gt</code>
+              </div>
+              <div class="case-option opt-b">
+                <span class="opt-letter">B</span>
+                <code>www.inscripciones-usac.com</code>
+              </div>
+            </div>
+            <button id="btn3" class="btn-case" onclick="toggleReveal('btn3','ans3','⚖️ Ver veredicto','🙈 Ocultar veredicto')">
+              ⚖️ Ver veredicto
+            </button>
+            <div class="case-answer" id="ans3">
+              <div class="verdict-label">📋 Veredicto — <span class="real-tag">A es el sitio real</span></div>
+              <p>La extensión <code>.edu</code> está restringida: solo las instituciones académicas oficiales pueden usarla. Si las inscripciones de la USAC fueran en un <code>.com</code>, cualquier particular podría haber comprado ese dominio. Ante cualquier proceso de inscripción universitaria, siempre se debe verificar que el dominio use <code>.edu</code>.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="phishing-tip">
+          <div class="pt-header">🛡️ Reglas para detectar phishing por el dominio</div>
+          <div class="pt-rules">
+            <div class="pt-rule">Verificar que la extensión corresponda a la naturaleza del sitio (<code>.gob</code> para gobierno, <code>.edu</code> para educación).</div>
+            <div class="pt-rule">Desconfiar de dominios largos con palabras como "seguro", "oficial", "bono" o el nombre de la institución dentro del dominio de segundo nivel.</div>
+            <div class="pt-rule">Una institución seria nunca pedirá datos personales en un dominio <code>.com</code> genérico.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 6: HOJA DE TRABAJO -->
+    <section class="slide slide-hw">
+      <div class="slide-number">📝</div>
+      <div class="content-wrap">
+        <div class="tag">Hoja de Trabajo</div>
+        <h2>Direcciones Web y Extensiones de Dominio</h2>
+
+        <div class="hw-header">
+          <div class="hw-info-grid">
+            <div><span class="hw-label">Institución</span> Liceo Cristiano de Estudios Avanzados Elim San Lucas</div>
+            <div><span class="hw-label">Curso</span> Producción de Contenidos Digitales</div>
+            <div><span class="hw-label">Grado</span> Quinto Bachillerato</div>
+            <div><span class="hw-label">Docente</span> Prof. Emerson Sec</div>
+            <div><span class="hw-label">Unidad</span> II — Estructura Web</div>
+            <div><span class="hw-label">Punteo</span> _____/10 pts.</div>
+          </div>
+          <div class="hw-student-line">
+            <div class="hw-field">Nombre: <span class="field-line"></span></div>
+            <div class="hw-field">Fecha: <span class="field-line short"></span></div>
+            <div class="hw-field">Clave: <span class="field-line short"></span></div>
+          </div>
+          <p class="hw-instructions">Responda los siguientes incisos basándose en los conceptos de registro y jerarquía de dominios de internet.</p>
+        </div>
+
+        <!-- SERIE I -->
+        <div class="serie">
+          <div class="serie-header">Serie I: Conceptos y Relaciones <span class="pts">(3 pts)</span></div>
+
+          <div class="question">
+            <div class="q-num">1</div>
+            <div class="q-body">
+              <p>Explique qué relación existe entre una <strong>Dirección IP</strong> y un <strong>Dominio de Internet</strong>.</p>
+              <div class="answer-lines"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="q-num">2</div>
+            <div class="q-body">
+              <p>Una un concepto de la <strong>Columna A</strong> con su definición en la <strong>Columna B</strong> colocando el número correspondiente en el paréntesis.</p>
+              <div class="match-exercise">
+                <div class="match-col col-a">
+                  <div class="match-header">Columna A</div>
+                  <div class="match-item"><span class="match-num">1</span> Intermediario (Registrador)</div>
+                  <div class="match-item"><span class="match-num">2</span> .edu</div>
+                  <div class="match-item"><span class="match-num">3</span> .gt</div>
+                </div>
+                <div class="match-col col-b">
+                  <div class="match-header">Columna B</div>
+                  <div class="match-item match-ans">( __ ) Extensión geográfica o de código de país.</div>
+                  <div class="match-item match-ans">( __ ) Empresa que cobra una tarifa anual por reservar un nombre en internet.</div>
+                  <div class="match-item match-ans">( __ ) Extensión genérica de uso exclusivo para instituciones académicas.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERIE II -->
+        <div class="serie">
+          <div class="serie-header">Serie II: Selección Comercial de Dominios <span class="pts">(4 pts)</span></div>
+          <p class="serie-intro">El estudiante fue contratado para asesorar a distintas instituciones en San Lucas Sacatepéquez sobre qué extensión de dominio deberían adquirir. Selecciona la opción correcta y justifica la decisión.</p>
+
+          <div class="question">
+            <div class="q-num">1</div>
+            <div class="q-body">
+              <p>Una nueva <strong>pizzería</strong> que quiere vender a domicilio en el municipio.</p>
+              <div class="domain-suggest">
+                <span>Dominio sugerido:</span>
+                <code>www.lapizzeriasanlucas.</code>
+                <div class="field-line short"></div>
+              </div>
+              <div class="answer-lines" style="margin-top:0.6rem"><div class="line"></div><div class="line"></div></div>
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="q-num">2</div>
+            <div class="q-body">
+              <p>Una <strong>ONG</strong> que rescata perros callejeros en el municipio.</p>
+              <div class="domain-suggest">
+                <span>Dominio sugerido:</span>
+                <code>www.rescateanimal.</code>
+                <div class="field-line short"></div>
+              </div>
+              <div class="answer-lines" style="margin-top:0.6rem"><div class="line"></div><div class="line"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERIE III -->
+        <div class="serie">
+          <div class="serie-header">Serie III: Análisis Crítico de Seguridad <span class="pts">(3 pts)</span></div>
+
+          <div class="case-doc">
+            <div class="case-doc-label">📱 Mensaje recibido</div>
+            <p>"¡Felicidades! Has sido seleccionada por el Gobierno para recibir un bono de alimentos. Ingresa tus datos en la página oficial del ministerio: <strong>www.bono-ayuda-gobierno-gt.com</strong>"</p>
+          </div>
+
+          <div class="question">
+            <div class="q-num">1</div>
+            <div class="q-body">
+              <p>Como estudiante de tecnología, se detecta inmediatamente que es una estafa. Explique <strong>técnicamente</strong>, usando los conocimientos sobre anatomía de dominios y extensiones gubernamentales, cómo se identifica que el enlace es falso.</p>
+              <div class="answer-lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CLAVE -->
+        <div class="answer-section">
+          <button class="btn-reveal" id="btnReveal" onclick="toggleReveal('btnReveal','answerBox','🔑 Ver Clave de Respuestas','🙈 Ocultar Clave')">
+            🔑 Ver Clave de Respuestas
+          </button>
+          <div class="answer-box" id="answerBox">
+            <div class="answer-label">✅ CLAVE DE RESPUESTAS — Es la respuesta esperada, no la respuesta del estudiante</div>
+            <div class="answer-content">
+
+              <div class="sol-serie">
+                <div class="sol-serie-title">Serie I — Conceptos y Relaciones</div>
+                <p><strong>1.</strong> El dominio es la traducción de texto, fácil de recordar para los humanos, de una dirección IP numérica. El sistema DNS realiza esa conversión automáticamente cada vez que se accede a una página web.</p>
+                <p><strong>2.</strong> Orden correcto: ( 3 ) — ( 1 ) — ( 2 )</p>
+              </div>
+
+              <div class="sol-serie">
+                <div class="sol-serie-title">Serie II — Selección Comercial</div>
+                <p><strong>1.</strong> Extensión recomendada: <code>.com</code> o <code>.com.gt</code>. Justificación: Es un negocio comercial con operación local en Guatemala.</p>
+                <p><strong>2.</strong> Extensión recomendada: <code>.org</code>. Justificación: Es el estándar global para fundaciones y organizaciones sin fines de lucro.</p>
+              </div>
+
+              <div class="sol-serie">
+                <div class="sol-serie-title">Serie III — Análisis de Seguridad</div>
+                <p>Es falso porque utiliza la extensión comercial genérica <code>.com</code>, la cual cualquier persona puede comprar pagando unos pocos dólares. Si fuera una página oficial del Estado de Guatemala, obligatoriamente terminaría en la extensión restringida <code>.gob.gt</code>, que solo puede ser registrada por instituciones gubernamentales. El texto "gobierno-gt" dentro del nombre del dominio es un engaño visual diseñado para aparentar oficialidad.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Producción de Contenidos Digitales &nbsp;·&nbsp; Unidad II &nbsp;·&nbsp; Prof. Emerson Sec</p>
+    <p class="footer-sub">Liceo Cristiano Elim — Quinto Bachillerato</p>
+  </footer>
+
+  <script src="../nav.js"></script>
+  <script src="clase6.js"></script>
+</body>
+</html>

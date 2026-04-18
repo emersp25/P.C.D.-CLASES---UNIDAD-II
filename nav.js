@@ -6,6 +6,9 @@ const CLASES = [
   { key: 'clase1', label: 'Clase 1',  folder: 'clase1', file: 'clase1.html', tema: 'Escritura para Web' },
   { key: 'clase2', label: 'Clase 2',  folder: 'clase2', file: 'clase2.html', tema: 'Creación de Blogs' },
   { key: 'clase3', label: 'Clase 3',  folder: 'clase3', file: 'clase3.html', tema: 'El Motor del Blog (CMS)' },
+  { key: 'clase4', label: 'Clase 4',  folder: 'clase4', file: 'clase4.html', tema: 'Ética y Netiquette' },
+  { key: 'clase5', label: 'Clase 5',  folder: 'clase5', file: 'clase5.html', tema: 'Metadatos y SEO' },
+  { key: 'clase6', label: 'Clase 6',  folder: 'clase6', file: 'clase6.html', tema: 'Dominios de Internet' },
 ];
 
 // ================================================
